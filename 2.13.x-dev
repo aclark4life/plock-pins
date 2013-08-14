@@ -1,0 +1,10 @@
+[buildout]
+extends = https://raw.github.com/pythonpackages/buildout-zope2/master/2.13.x
+parts += omelette
+
+[omelette]
+recipe = collective.recipe.omelette
+eggs = ${zope2:eggs}
+
+[zope2]
+eggs += Products.DocFinderTab

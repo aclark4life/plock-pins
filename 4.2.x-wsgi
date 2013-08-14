@@ -1,0 +1,5 @@
+[buildout]
+extends = 
+    http://dist.plone.org/release/4.2.2/versions.cfg
+    https://raw.github.com/pythonpackages/buildout-plone/master/base.cfg
+    https://raw.github.com/pythonpackages/buildout-plone/master/wsgi.cfg

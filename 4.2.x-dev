@@ -1,0 +1,36 @@
+[buildout]
+auto-checkout = *
+extends = https://raw.github.com/pythonpackages/buildout-plone/master/4.2.x
+extensions += 
+    mr.developer
+parts +=
+    omelette
+    test
+    zopepy
+
+[omelette]
+eggs = ${plone:eggs}
+recipe = collective.recipe.omelette
+
+[plone]
+eggs +=
+    PasteScript
+    Products.DocFinderTab
+    Products.FSDump
+    ZopeSkel
+    plone.app.debugtoolbar
+scripts = ZopeSkel
+verbose-security = on
+
+[zopepy]
+# A Python interpreter with Plone in the sys.path
+eggs = ${plone:eggs}
+interpreter = zopepy
+recipe = zc.recipe.egg
+
+[test]
+eggs = ${plone:eggs}
+recipe = zc.recipe.testrunner
+
+[versions]
+ZopeSkel = 2.21.2

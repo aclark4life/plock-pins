@@ -1,0 +1,6 @@
+[buildout]
+extends = https://raw.github.com/pythonpackages/buildout-zope2/master/2.13.x
+parts += zeo 
+
+[zeo]
+recipe = plone.recipe.zeoserver

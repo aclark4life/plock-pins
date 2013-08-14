@@ -1,0 +1,33 @@
+[buildout]
+extends = https://raw.github.com/pythonpackages/buildout-plone/master/base.cfg
+parts =
+    instance
+    plone
+    zope2
+versions = versions
+
+[instance]
+recipe = plone.recipe.zope2instance
+eggs = 
+    Pillow
+    Products.PloneHotfix20110531
+    Products.PloneHotfix20110720
+    Products.PloneHotfix20121106
+    ${plone:eggs}
+products = ${plone:location}
+user = admin:admin
+zope2-location = ${zope2:location}
+
+[plone]
+recipe = plone.recipe.plone
+
+[zope2]
+recipe = plone.recipe.zope2install
+url = http://www.zope.org/Products/Zope/2.10.9/Zope-2.10.9-final.tgz
+
+[versions]
+Pillow = 1.7.8
+plone.recipe.plone = 3.1.7
+plone.recipe.zope2install = 3.3
+plone.recipe.zope2instance = 3.10
+zc.buildout = 1.7.1

@@ -1,0 +1,30 @@
+[buildout]
+extends = https://raw.github.com/pythonpackages/buildout-plone/master/base.cfg
+parts =
+    instance
+    plone
+versions = versions
+
+[instance]
+recipe = plone.recipe.zope2instance
+eggs = 
+    Pillow
+    Products.PloneHotfix20121106
+products = ${plone:location}
+user = admin:admin
+zope2-location = ${zope2:location}
+
+[plone]
+recipe = hexagonit.recipe.download
+url = http://dist.plone.org/archive/Plone-2.0.5.tar.gz
+strip-top-level-dir = true
+
+[zope2]
+recipe = plone.recipe.zope2install
+url = http://old.zope.org/Products/Zope/2.7.8/Zope-2.7.8-final.tgz
+
+[versions]
+Pillow = 1.7.8
+plone.recipe.zope2install = 3.3
+plone.recipe.zope2instance = 3.10
+zc.buildout = 1.7.1

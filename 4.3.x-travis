@@ -1,0 +1,4 @@
+[buildout]
+extends = 
+    4.3.x
+    .travis.cfg

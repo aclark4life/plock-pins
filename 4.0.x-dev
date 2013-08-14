@@ -1,0 +1,33 @@
+[buildout]
+auto-checkout = *
+extends = https://raw.github.com/pythonpackages/buildout-plone/master/4.0.x
+extensions +=
+    buildout.dumppickedversions
+    mr.developer
+parts +=
+    omelette
+    zopepy
+    test
+
+[omelette]
+recipe = collective.recipe.omelette
+eggs = ${plone:eggs}
+
+[plone]
+debug-mode = on
+verbose-security = on
+eggs += 
+    Products.DocFinderTab
+    Products.FSDump
+
+[zopepy]
+recipe = zc.recipe.egg
+eggs = ${plone:eggs}
+interpreter = zopepy
+
+[test]
+recipe = zc.recipe.testrunner
+eggs =
+
+[versions]
+zc.recipe.egg = 1.3.2
