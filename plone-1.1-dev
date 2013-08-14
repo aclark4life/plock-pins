@@ -1,6 +1,0 @@
-[buildout]
-auto-checkout = *
-extends = https://raw.github.com/pythonpackages/buildout-plone/master/1.1.x
-extensions =
-    buildout.bootstrap
-    mr.developer
