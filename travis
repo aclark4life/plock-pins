@@ -1,0 +1,8 @@
+#!/bin/sh
+for VERSION in plone-4.3 plone-4.2 plone-4.1 plone-4.0
+do
+echo ================================================================================
+    echo Buildout: Plone $VERSION...
+    echo ================================================================================
+    buildout -c travis-$VERSION.cfg
+done
