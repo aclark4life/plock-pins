@@ -6,8 +6,8 @@ zcml =
 
 [buildout]
 extends = 
-    https://raw.github.com/pythonpackages/buildout-zope2/master/2.13.20-versions.cfg
-    https://raw.github.com/pythonpackages/buildout-zope2/master/base.cfg
+    https://github.com/plock/pins/master/2.13.21-versions.cfg
+    https://github.com/plock/pins/master/base-zope2.cfg
 
 [zope2]
 eggs = 
