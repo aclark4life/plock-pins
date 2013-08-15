@@ -1,14 +1,22 @@
+[addon]
+packages =
+    plonetheme.diazo_sunburst
+    zope2_bootstrap
+zcml = 
+    zope2_bootstrap
+
 [buildout]
 extends = 
-    http://dist.plone.org/release/4.2.5/versions.cfg
-    https://raw.github.com/pythonpackages/buildout-plone/master/base.cfg
-parts = plone
+# The order matters, Plone versions go first
+    https://raw.github.com/plock/pins/master/4.2.6-versions.cfg
+# Then we override them as needed
+    https://raw.github.com/plock/pins/master/base-plone.cfg
 
 [plone]
-recipe = plone.recipe.zope2instance
-eggs =
-    Pillow
-    Plone
-    zope2_bootstrap
-user = admin:admin
-zcml = zope2_bootstrap
+eggs = 
+    ${base:packages}
+    ${addon:packages}
+
+zcml =
+    ${base:zcml}
+    ${addon:zcml}
