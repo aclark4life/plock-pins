@@ -3,7 +3,7 @@
 for VERSION in plone-4.3
 do
 echo ================================================================================
-    echo Buildout: Plone $VERSION...
+    echo Buildout: $VERSION...
     echo ================================================================================
     buildout -c travis-$VERSION.cfg
 done
