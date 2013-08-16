@@ -1,5 +1,5 @@
 [buildout]
-extends = https://raw.github.com/pythonpackages/buildout-plone/master/base.cfg
+extends = https://raw.github.com/plock/pins/master/base-plone.cfg
 parts =
     instance
     plone
