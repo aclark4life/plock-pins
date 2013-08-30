@@ -30,4 +30,4 @@ ZopeSkel = 2.21.2
 # Use latest; i.e higher versions than Plone core uses
 Pillow = 2.1.0
 zc.buildout = 2.2.0
-setuptools = 1.0
+setuptools = 1.1
