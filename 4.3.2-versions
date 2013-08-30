@@ -1,6 +1,6 @@
 [buildout]
-extends = https://raw.github.com/plock/pins/master/1.0.8-zopeapp-versions.cfg
-          https://raw.github.com/plock/pins/master/2.13.21-versions.cfg
+extends = https://raw.github.com/plock/pins/master/1.0.8-zopeapp-versions
+          https://raw.github.com/plock/pins/master/2.13.21-versions
 
 [versions]
 # Zope overrides
