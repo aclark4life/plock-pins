@@ -1,2 +1,3 @@
 [buildout]
-extends = https://raw.github.com/plock/pins/master/zope-2.13
+extends = 
+    zope-2.13

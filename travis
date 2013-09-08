@@ -1,3 +1,0 @@
-# Use same version of Setuptools as Travis-CI, possibly older than the current release
-[versions]
-setuptools = 0.9.8
