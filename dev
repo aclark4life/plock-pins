@@ -23,15 +23,16 @@ eggs +=
     tl.eggdeps
 scripts += ZopeSkel
 
+[test]
+eggs = ${plone:eggs}
+defaults = ['--auto-color', '--auto-progress']
+recipe = zc.recipe.testrunner
+
 [zope2]
 # Allow extension of this config from either Plone or Zope2 configs by adding a Zope2 section here (in addition to Plone). Previously done with separate *-dev configs for each.
 eggs +=
     Products.DocFinderTab
     Products.FSDump
-
-[test]
-eggs = ${plone:eggs}
-recipe = zc.recipe.testrunner
 
 [zopepy]
 # A Python interpreter with Plone in the sys.path
