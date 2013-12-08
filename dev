@@ -4,38 +4,30 @@ extensions +=
     buildout.bootstrap
     mr.developer
 parts +=
+    interpreter
     omelette
     test
-    zopepy
 show-picked-versions = true
 
 [omelette]
-eggs = ${plone:eggs}
+eggs = ${plock:eggs}
 recipe = collective.recipe.omelette
 
-[plone]
+[plock]
 eggs +=
     Products.DocFinderTab
     Products.FSDump
     ZopeSkel
-    plone.app.debugtoolbar
-    plone.app.testing
     tl.eggdeps
 scripts += ZopeSkel
 
 [test]
-eggs = ${plone:eggs}
+eggs = ${plock:eggs}
 defaults = ['--auto-color', '--auto-progress']
 recipe = zc.recipe.testrunner
 
-[zope2]
-# Allow extension of this config from either Plone or Zope2 configs by adding a Zope2 section here (in addition to Plone). Previously done with separate *-dev configs for each.
-eggs +=
-    Products.DocFinderTab
-    Products.FSDump
-
-[zopepy]
-# A Python interpreter with Plone in the sys.path
-eggs = ${plone:eggs}
+[interpreter]
+# A Python interpreter with Zope/Plone in the sys.path
+eggs = ${plock:eggs}
 interpreter = zopepy
 recipe = zc.recipe.egg
