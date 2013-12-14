@@ -54,3 +54,7 @@ command = ${buildout:bin-directory}/bin/backup
 recipe = z3c.recipe.usercrontab
 times = 0 0 1 * * 
 command = ${buildout:bin-directory}/bin/zeopack
+
+[versions]
+# XXX p.r.zeoserver does not work with zc.buildout >= 2.0
+zc.buildout = 1.7.1
