@@ -7,8 +7,10 @@ zcml =
 
 [buildout]
 extends = 
+# The order matters, Plone versions go first
     https://raw.github.com/plock/pins/master/4.2.6-versions
-    https://raw.github.com/plock/pins/master/base
+# Then we override them as needed
+    https://raw.github.com/plock/pins/master/base-plone
 
 [plone]
 eggs = 
