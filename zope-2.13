@@ -7,7 +7,7 @@ zcml =
 [buildout]
 extends = 
     https://raw.github.com/plock/pins/master/2.13.21-versions
-    https://raw.github.com/plock/pins/master/base
+    https://raw.github.com/plock/pins/master/base-zope2
 
 [plock]
 eggs = 
