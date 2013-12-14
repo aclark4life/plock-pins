@@ -9,11 +9,10 @@ extends =
     https://raw.github.com/plock/pins/master/2.13.21-versions
     https://raw.github.com/plock/pins/master/base-zope2
 
-[plock]
+[zope2]
 eggs = 
     ${base:packages}
     ${addon:packages}
-    Zope2
 recipe = plone.recipe.zope2instance
 user = admin:admin
 zcml = 
