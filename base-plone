@@ -2,6 +2,7 @@
 allow-hosts =
     pypi.python.org
     raw.github.com
+extends = https://raw.github.com/plock/pins/master/versions
 find-links =
     https://raw.github.com/plock/dist/master/docutils-0.9.1.tar.gz
     https://raw.github.com/plock/dist/master/elementtree-1.2.7-20070827-preview.zip
@@ -22,12 +23,3 @@ scripts =
 user = admin:admin
 zcml =
     ${base:zcml}
-
-[versions]
-# Avoid templer
-ZopeSkel = 2.21.2
-
-# Use latest; i.e higher versions than Plone core uses
-Pillow = 2.2.1
-zc.buildout = 2.2.1
-setuptools = 2.0
