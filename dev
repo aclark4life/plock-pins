@@ -17,9 +17,9 @@ recipe = collective.recipe.omelette
 eggs +=
     Products.DocFinderTab
     Products.FSDump
-    ZopeSkel
-    plone.app.debugtoolbar
-    plone.app.testing
+#    ZopeSkel
+#    plone.app.debugtoolbar
+#    plone.app.testing
     tl.eggdeps
 #scripts += ZopeSkel
 
