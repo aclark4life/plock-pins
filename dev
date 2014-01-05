@@ -21,7 +21,7 @@ eggs +=
     plone.app.debugtoolbar
     plone.app.testing
     tl.eggdeps
-scripts += ZopeSkel
+#scripts += ZopeSkel
 
 [test]
 eggs = ${plone:eggs}
