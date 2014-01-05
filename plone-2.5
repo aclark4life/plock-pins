@@ -1,12 +1,12 @@
 [buildout]
 extends = https://raw.github.com/plock/pins/master/base-plone
 parts =
-    instance
+    dist
     plone
     zope2
 versions = versions
 
-[instance]
+[plone]
 recipe = plone.recipe.zope2instance
 eggs = 
     Pillow
@@ -17,7 +17,7 @@ products = ${plone:location}
 user = admin:admin
 zope2-location = ${zope2:location}
 
-[plone]
+[dist]
 recipe = plone.recipe.distros
 urls = http://launchpad.net/plone/2.5/2.5.5/+download/Plone-2.5.5.tar.gz
 nested-packages = Plone-2.5.5.tar.gz
