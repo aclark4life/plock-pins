@@ -5,7 +5,7 @@ extensions +=
     mr.developer
 parts +=
     omelette
-    test
+#    test
     zopepy
 show-picked-versions = true
 
