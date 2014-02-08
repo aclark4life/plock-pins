@@ -35,6 +35,7 @@ programs +=
 
 [ports]
 plone = 8080
+zope2 = 8080
 zeo = 8100
 
 [hosts]
