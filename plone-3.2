@@ -1,6 +1,6 @@
 [buildout]
 extends = 
-    http://dist.plone.org/release/3.2.3/versions.cfg
+    https://raw.github.com/plock/pins/master/3.2.3-versions
     https://raw.github.com/plock/pins/master/base-plone
 parts = plone
 versions = versions
@@ -15,11 +15,11 @@ products =
 user = admin:admin
 zope2-location = ${zope2:location}
 
-[zope2]
-recipe = plone.recipe.zope2install
-url = ${versions:zope2-url}
-
 [versions]
 Pillow = 1.7.8
 setuptools = 1.4.2
 zc.buildout = 1.7.1
+
+[zope2]
+recipe = plone.recipe.zope2install
+url = ${versions:zope2-url}
