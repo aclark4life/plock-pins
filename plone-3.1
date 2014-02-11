@@ -1,5 +1,7 @@
 [buildout]
-extends = https://raw.github.com/plock/pins/master/base-plone
+extends = 
+    https://raw.github.com/plock/pins/master/base-plone
+    https://raw.github.com/plock/pins/master/versions
 parts =
     instance
     plone
@@ -32,3 +34,4 @@ plone.recipe.zope2install = 3.3
 plone.recipe.zope2instance = 3.10
 setuptools = 1.4.2
 zc.buildout = 1.7.1
+z3c.form = 2.4.4
