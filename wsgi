@@ -3,7 +3,7 @@ parts += wsgi
 
 [wsgi]
 recipe = collective.recipe.template
-url = https://raw.github.com/plock/pins/master/plone.ini
+url = https://raw.github.com/plock/pins/master/wsgi-ini
 output = ${buildout:directory}/plone.ini
 
 [plone]
