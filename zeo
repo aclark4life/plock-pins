@@ -7,9 +7,6 @@ parts +=
     cron-backup
     cron-pack
 
-# Support zc.buildout < 2.x where the versions parameter does not default to "versions"
-versions = versions
-
 [plone]
 # Tell Plone to use zeo (overrides plone section in buildout.cfg)
 zeo-client = true
