@@ -1,0 +1,20 @@
+[addon]
+packages =
+    plonetheme.diazo_sunburst
+    zope2_bootstrap
+zcml = 
+    zope2_bootstrap
+
+[buildout]
+extends = 
+    https://raw.github.com/plock/pins/master/plone-4-2-6-versions.cfg
+    https://raw.github.com/plock/pins/master/base
+
+[plone]
+eggs = 
+    ${base:packages}
+    ${addon:packages}
+
+zcml =
+    ${base:zcml}
+    ${addon:zcml}
