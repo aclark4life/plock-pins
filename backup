@@ -7,14 +7,14 @@ parts +=
     backup-cron
     pack-cron
 
-# Backup daily
-[cron-backup]
+[backup-cron]
 recipe = z3c.recipe.usercrontab
+# Backup daily
 times = 0 0 * * * 
 command = ${buildout:bin-directory}/bin/backup
 
-# Pack once a month
-[cron-pack]
+[pack-cron]
 recipe = z3c.recipe.usercrontab
+# Pack once a month
 times = 0 0 1 * * 
 command = ${buildout:bin-directory}/bin/zeopack
