@@ -1,54 +1,22 @@
 [buildout]
 extends = https://raw.github.com/plock/pins/master/supervisor
-parts +=
-    backup
-    zeo 
-
-    cron-backup
-    cron-pack
+parts += zeo 
 
 [plone]
-# Tell Plone to use zeo (overrides plone section in buildout.cfg)
 zeo-client = true
 shared-blob = on
 http-address = ${ports:plone}
 zeo-address = ${ports:zeo}
 
-[zope2]
-# Allow extension of this config from either Plone or Zope2 configs by adding a Zope2 section here (in addition to Plone). Previously done with separate *-zeo configs for each.
-zeo-client = true
-shared-blob = on
-http-address = ${ports:zope2}
-zeo-address = ${ports:zeo}
-
-[zeo]
-recipe = plone.recipe.zeoserver
-eggs = ${plone:eggs}
-zeo-address = ${ports:zeo}
+[ports]
+plone = 8080
+zeo = 8100
 
 [supervisor]
 programs +=
     0 zeo ${buildout:directory}/bin/zeo [ fg ]
 
-[ports]
-plone = 8080
-zope2 = 8080
-zeo = 8100
-
-[hosts]
-localhost = 127.0.0.1
-
-[backup]
-recipe = collective.recipe.backup
-
-# Backup daily
-[cron-backup]
-recipe = z3c.recipe.usercrontab
-times = 0 0 * * * 
-command = ${buildout:bin-directory}/bin/backup
-
-# Pack once a month
-[cron-pack]
-recipe = z3c.recipe.usercrontab
-times = 0 0 1 * * 
-command = ${buildout:bin-directory}/bin/zeopack
+[zeo]
+recipe = plone.recipe.zeoserver
+eggs = ${plone:eggs}
+zeo-address = ${ports:zeo}
