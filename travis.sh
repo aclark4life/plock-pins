@@ -1,5 +1,5 @@
 #!/bin/sh
-for TARGET in plone-4.3 plone-4.2 zope-2.13
+for TARGET in plone-4-3
 do
     echo ================================================================================
     echo Buildout: $TARGET...
