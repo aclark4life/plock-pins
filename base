@@ -2,7 +2,6 @@
 allow-hosts =
     pypi.python.org
     raw.github.com
-extends = https://raw.github.com/plock/pins/master/version-overrides
 find-links =
     https://raw.github.com/plock/dist/master/docutils-0.9.1.tar.gz
     https://raw.github.com/plock/dist/master/elementtree-1.2.7-20070827-preview.zip
@@ -23,3 +22,9 @@ scripts =
 user = admin:admin
 zcml =
     ${base:zcml}
+
+[versions]
+Pillow = 2.2.2
+ZopeSkel = 2.21.2
+setuptools = 2.2
+zc.buildout = 2.2.1
