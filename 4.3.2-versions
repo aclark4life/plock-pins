@@ -1,7 +1,7 @@
 [buildout]
 extends =
-    http://dist.plone.org/versions/zopetoolkit-1-0-8-zopeapp-versions.cfg
-    http://dist.plone.org/versions/zope-2-13-21-versions.cfg
+    https://raw.github.com/plock/pins/master/zopetoolkit-1-0-8-zopeapp-versions.cfg
+    https://raw.github.com/plock/pins/master/zope-2-13-21-versions.cfg
 
 [versions]
 # Zope overrides
