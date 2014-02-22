@@ -1,0 +1,20 @@
+[backup]
+recipe = collective.recipe.backup
+
+[buildout]
+parts +=
+    backup
+    backup-cron
+    pack-cron
+
+# Backup daily
+[cron-backup]
+recipe = z3c.recipe.usercrontab
+times = 0 0 * * * 
+command = ${buildout:bin-directory}/bin/backup
+
+# Pack once a month
+[cron-pack]
+recipe = z3c.recipe.usercrontab
+times = 0 0 1 * * 
+command = ${buildout:bin-directory}/bin/zeopack
