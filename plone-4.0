@@ -1,7 +1,7 @@
 [buildout]
 extends =
-    http://dist.plone.org/release/4.0.10/versions.cfg 
-    https://raw.github.com/plock/pins/master/base-plone
+    https://raw.github.com/plock/pins/master/plone-4-0-10-versions.cfg
+    https://raw.github.com/plock/pins/master/base
 parts = plone
 versions = versions
 
