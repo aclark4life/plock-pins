@@ -22,9 +22,3 @@ scripts =
 user = admin:admin
 zcml =
     ${base:zcml}
-
-[versions]
-Pillow = 2.2.2
-ZopeSkel = 2.21.2
-setuptools = 2.2
-zc.buildout = 2.2.1
