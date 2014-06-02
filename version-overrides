@@ -1,5 +1,5 @@
 [versions]
 Pillow = 2.3.0
 ZopeSkel = 2.21.2
-setuptools = 3.7
+setuptools = 4.0.1
 zc.buildout = 2.2.1
