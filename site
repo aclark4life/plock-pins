@@ -1,0 +1,6 @@
+[plone]
+parts += plonesite
+
+[plonesite]
+recipe = collective.recipe.plonesite
+instance = plone
