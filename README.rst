@@ -18,4 +18,7 @@ Edit ``buildout.cfg`` to contain::
     [buildout]
     extends = https://raw.github.com/plock/pins/master/plone-5-0
 
-Now run Buildout.
+Now run Buildout and start Plone::
+
+    $ bin/buildout
+    $ bin/plone fg
