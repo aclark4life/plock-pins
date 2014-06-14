@@ -8,7 +8,7 @@ zcml = zope2_bootstrap
 extends = 
     https://raw.github.com/plock/pins/master/base
     https://raw.github.com/plock/pins/master/plone-4-3-3-versions.cfg
-    https://raw.github.com/plock/pins/master/version-overrides
+    https://raw.github.com/plock/pins/master/versions
 
 [plone]
 eggs = 
