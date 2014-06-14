@@ -5,6 +5,7 @@ allow-hosts =
 find-links =
     https://raw.github.com/plock/dist/master/docutils-0.9.1.tar.gz
     https://raw.github.com/plock/dist/master/elementtree-1.2.7-20070827-preview.zip
+newest = false
 parts = plone
 
 [base]
