@@ -1,7 +1,5 @@
 [addon]
-packages =
-    plonetheme.diazo_sunburst
-    zope2_bootstrap
+packages = zope2_bootstrap
 zcml = zope2_bootstrap
 
 [buildout]
