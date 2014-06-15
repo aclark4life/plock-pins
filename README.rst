@@ -1,7 +1,7 @@
 Plock Pins
 ==========
 
-Hosted Buildout configuration files for all your Plone deployments and versions.
+Hosted configuration files for all versions of Plone, ever
 
 Usage
 -----
