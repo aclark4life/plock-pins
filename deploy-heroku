@@ -1,0 +1,50 @@
+# Usage notes
+# ------------------
+# the expected use of this pin is in a PNDK 
+# heroku.cfg file for deployment to heroku
+# see: http://tinyurl.com/plone-newbie-dev-kit 
+# a typical heroku.cfg file would look like this:
+#
+#     [deploy]
+#     user = admin:<strong password should be placed here>
+#     packages =
+#               example.staffprofile
+#     [buildout]
+#     extends =
+#              https://raw.github.com/plock/pins/master/deploy-heroku
+#  
+#
+
+[deploy]
+user = admin:changetheadminpassword
+packages =
+
+[buildout]
+extends =
+    https://raw.github.com/plock/pins/master/plone-4-3
+
+# pypi_local is a PNDK convention
+# a local directory for locally developed production packages
+# see PNDK documentation at http://tinyurl.com/plone-newbie-dev-kit 
+find-links += 
+           pypi_local/
+              
+relative-paths = true
+
+[plone]
+relative-paths = true
+user = ${deploy:user}
+eggs +=
+    RelStorage
+    psycopg2
+    ${deploy:packages}
+
+rel-storage =
+    keep-history false
+    blob-dir /tmp/blobcache
+    shared-blob-dir false
+    type postgresql
+    host PG_HOST
+    dbname PG_DBNAME
+    user PG_USER
+    password PG_PASS
