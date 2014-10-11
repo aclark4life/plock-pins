@@ -1,17 +1,20 @@
-### -- Usage notes
-## the expected use of this pin is in a PNDK 
-## heroku.cfg file for deployment to heroku
-## see: http://tinyurl.com/plone-newbie-dev-kit 
+# Usage notes
+# ------------------
+# the expected use of this pin is in a PNDK 
+# heroku.cfg file for deployment to heroku
+# see: http://tinyurl.com/plone-newbie-dev-kit 
+# a typical heroku.cfg file would look like this:
 #
-#   [deploy]
-#   user = admin:<strong password should be placed here>
-#   packages =
-#             example.staffprofile
-#   [buildout]
-#   extends =
-#            https://raw.github.com/plock/pins/master/deploy-heroku
+#     [deploy]
+#     user = admin:<strong password should be placed here>
+#     packages =
+#               example.staffprofile
+#     [buildout]
+#     extends =
+#              https://raw.github.com/plock/pins/master/deploy-heroku
+#  
 #
-###
+
 [deploy]
 user = admin:changetheadminpassword
 packages =
