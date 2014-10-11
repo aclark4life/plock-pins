@@ -6,9 +6,12 @@ packages =
 extends =
     https://raw.github.com/plock/pins/master/plone-4-3
 
-find-links += http://effbot.org/downloads/
-              pypi_local/
-
+# pypi_local is a PNDK convention
+# a local directory for locally developed production packages
+# see PNDK documentation at http://tinyurl.com/plone-newbie-dev-kit 
+find-links += 
+           pypi_local/
+              
 relative-paths = true
 
 [plone]
