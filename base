@@ -14,7 +14,7 @@ packages =
 zcml =
 
 [env]
-recipe = collective.recipe.environment
+recipe = gocept.recipe.env
 
 [plone]
 eggs = 
