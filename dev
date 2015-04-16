@@ -10,6 +10,7 @@ recipe = collective.recipe.omelette
 
 [plone]
 eggs +=
+    ZopeSkel
     Products.DocFinderTab
     Products.FSDump
     tl.eggdeps
