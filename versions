@@ -1,9 +1,12 @@
 [versions]
 Cheetah = 2.2.1
 Pillow = 2.8.1
+Products.DocFinderTab = 1.0.5
+Products.FSDump = 0.9.5
 ZopeSkel = 2.21.2
 collective.recipe.environment = 0.2.0
 plonetheme.diazo-sunburst = 0.0.9
 setuptools = 12.0.5
 zc.buildout = 2.3.1
 zope2-bootstrap = 0.1.0
+zopeskel.dexterity = 1.5.4.1
