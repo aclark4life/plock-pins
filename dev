@@ -18,6 +18,7 @@ recipe = collective.recipe.omelette
 
 [plone]
 eggs =
+    ${addon:packages}
     ${base:packages}
     ${dev:packages}
 scripts = zopeskel
