@@ -5,7 +5,8 @@ parts += omelette
 show-picked-versions = true
 
 [dev]
-packages = Products.DocFinderTab
+packages = 
+    Products.DocFinderTab
     Products.FSDump
     ZopeSkel
     tl.eggdeps
@@ -16,4 +17,6 @@ eggs = ${plone:eggs}
 recipe = collective.recipe.omelette
 
 [plone]
-eggs = ${base:packages} ${dev:packages}
+eggs =
+    ${base:packages}
+    ${dev:packages}
