@@ -13,7 +13,6 @@ eggs +=
     Products.DocFinderTab
     Products.FSDump
     tl.eggdeps
-    zopeskel.dexterity
 
 [zopeskel]
 recipe = zc.recipe.egg
