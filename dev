@@ -1,7 +1,7 @@
 [buildout]
 auto-checkout = *
 extensions += mr.developer
-parts += omelette
+parts += omelette zopeskel
 show-picked-versions = true
 
 [omelette]
@@ -13,3 +13,6 @@ eggs +=
     Products.DocFinderTab
     Products.FSDump
     tl.eggdeps
+
+[zopeskel]
+recipe = zc.recipe.egg
