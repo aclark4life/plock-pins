@@ -20,3 +20,4 @@ recipe = collective.recipe.omelette
 eggs =
     ${base:packages}
     ${dev:packages}
+scripts = zopeskel
