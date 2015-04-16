@@ -4,15 +4,19 @@ extensions += mr.developer
 parts += omelette zopeskel
 show-picked-versions = true
 
+[dev]
+eggs =
+    Products.DocFinderTab
+    Products.FSDump
+    tl.eggdeps
+    zopeskel.dexterity
+
 [omelette]
 eggs = ${plone:eggs}
 recipe = collective.recipe.omelette
 
 [plone]
-eggs +=
-    Products.DocFinderTab
-    Products.FSDump
-    tl.eggdeps
+eggs = ${plone:eggs} ${dev:eggs}
 
 [zopeskel]
 recipe = zc.recipe.egg
