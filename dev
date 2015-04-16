@@ -1,13 +1,14 @@
 [buildout]
 auto-checkout = *
 extensions += mr.developer
-parts += omelette zopeskel
+parts += omelette
 show-picked-versions = true
 
 [dev]
 eggs =
     Products.DocFinderTab
     Products.FSDump
+    ZopeSkel
     tl.eggdeps
     zopeskel.dexterity
 
@@ -17,6 +18,3 @@ recipe = collective.recipe.omelette
 
 [plone]
 eggs = ${plone:eggs} ${dev:eggs}
-
-[zopeskel]
-recipe = zc.recipe.egg
