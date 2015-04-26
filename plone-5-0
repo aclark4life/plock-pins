@@ -5,7 +5,7 @@ zcml = zope2_bootstrap
 [buildout]
 extends = 
     https://raw.github.com/plock/pins/master/base
-    https://raw.github.com/plock/pins/master/plone-5-0b1-versions.cfg
+    https://raw.github.com/plock/pins/master/plone-5-0a3-versions.cfg
     https://raw.github.com/plock/pins/master/versions
 
 [plone]
