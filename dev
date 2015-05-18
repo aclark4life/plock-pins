@@ -1,6 +1,8 @@
 [buildout]
 auto-checkout = *
-extensions += mr.developer
+extensions += 
+    buildout.bootstrap
+    mr.developer
 parts += omelette
 show-picked-versions = true
 
@@ -9,7 +11,6 @@ packages =
     Products.DocFinderTab
     Products.FSDump
     ZopeSkel
-    buildout.bootstrap
     tl.eggdeps
     zopeskel.dexterity
 
