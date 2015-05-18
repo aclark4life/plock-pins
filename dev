@@ -9,6 +9,7 @@ packages =
     Products.DocFinderTab
     Products.FSDump
     ZopeSkel
+    buildout.bootstrap
     tl.eggdeps
     zopeskel.dexterity
 
