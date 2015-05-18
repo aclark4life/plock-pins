@@ -1,5 +1,6 @@
 [versions]
 Pillow = 2.8.1
+buildout.bootstrap = 1.4.7
 collective.recipe.environment = 0.2.0
 plonetheme.diazo-sunburst = 0.0.9
 setuptools = 15.1
