@@ -8,7 +8,7 @@ Usage
 
 Installing Plone with Plock Pins
 
-Install virtualenv and buildout
+Install virtualenv & buildout
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
@@ -25,7 +25,7 @@ Edit buildout.cfg
     [buildout]
     extends = https://raw.github.com/plock/pins/master/plone-4-3
 
-Run Buildout & start Plone
+Run Buildout & Start Plone
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
