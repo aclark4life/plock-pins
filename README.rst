@@ -1,23 +1,32 @@
 Plock Pins
 ==========
 
-Hosted configuration files for all versions of Plone, ever
+Hosted configuration files for all versions of Plone
 
 Usage
 -----
 
-Installation of Plone with Plock Pins looks like this::
+Installing Plone with Plock Pins
+
+Install virtualenv and buildout
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     $ virtualenv-2.7
     $ bin/pip install zc.buildout
     $ bin/buildout init
 
-Edit ``buildout.cfg`` to contain::
+Edit buildout.cfg
+~~~~~~~~~~~~~~~~~
+
+Enter in ``buildout.cfg``:: 
 
     [buildout]
     extends = https://raw.github.com/plock/pins/master/plone-4-3
 
-Now run Buildout and start Plone::
+Run Buildout & start Plone
+--------------------------
+
+::
 
     $ bin/buildout
     $ bin/plone fg
