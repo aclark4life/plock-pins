@@ -26,7 +26,7 @@ Edit buildout.cfg
     extends = https://raw.github.com/plock/pins/master/plone-4-3
 
 Run Buildout & start Plone
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
