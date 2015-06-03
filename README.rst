@@ -20,6 +20,8 @@ Install virtualenv and buildout
 Edit buildout.cfg
 ~~~~~~~~~~~~~~~~~
 
+::
+
     [buildout]
     extends = https://raw.github.com/plock/pins/master/plone-4-3
 
