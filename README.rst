@@ -6,7 +6,7 @@ Hosted configuration files for all versions of Plone
 Usage
 -----
 
-Installing Plone with Plock Pins
+Install Plone with Plock Pins
 
 Install virtualenv & buildout
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
