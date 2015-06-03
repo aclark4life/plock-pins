@@ -22,4 +22,7 @@ products =
 recipe = plone.recipe.zope2instance
 scripts =
 user = admin:admin
-zcml =
+zcml = ${zcml:packages}
+
+[zcml]
+packages =
