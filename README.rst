@@ -11,6 +11,8 @@ Installing Plone with Plock Pins
 Install virtualenv and buildout
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+::
+
     $ virtualenv-2.7
     $ bin/pip install zc.buildout
     $ bin/buildout init
