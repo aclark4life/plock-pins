@@ -12,6 +12,7 @@ packages =
     Products.DocFinderTab
     Products.FSDump
     ZopeSkel
+    bobtemplates.plone
     tl.eggdeps
     zopeskel.dexterity
 
@@ -24,10 +25,7 @@ eggs =
     ${addon:packages}
     ${base:packages}
     ${dev:packages}
-scripts = zopeskel
-
-[mr.bob]
-recipe = zc.recipe.egg:scripts
+scripts = mrbob zopeskel
 
 [versions]
 Cheetah = 2.2.1
@@ -35,7 +33,6 @@ MarkupSafe = 0.23
 Products.DocFinderTab = 1.0.5
 Products.FSDump = 0.9.5
 ZopeSkel = 2.21.2
-bobtemplates.plone
 buildout.bootstrap = 1.4.7
 zopeskel.dexterity = 1.5.4.1
 mr.bob = 0.1.1
