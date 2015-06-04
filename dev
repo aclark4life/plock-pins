@@ -24,7 +24,7 @@ eggs =
     ${addon:packages}
     ${base:packages}
     ${dev:packages}
-scripts = zopeskel
+scripts = mrbob zopeskel
 
 [versions]
 Cheetah = 2.2.1
