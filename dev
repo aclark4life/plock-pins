@@ -2,6 +2,7 @@
 auto-checkout = *
 extensions += 
     buildout.bootstrap
+    mr.bob
     mr.developer
 parts += omelette
 show-picked-versions = true
