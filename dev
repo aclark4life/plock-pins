@@ -35,6 +35,7 @@ MarkupSafe = 0.23
 Products.DocFinderTab = 1.0.5
 Products.FSDump = 0.9.5
 ZopeSkel = 2.21.2
+bobtemplates.plone
 buildout.bootstrap = 1.4.7
 zopeskel.dexterity = 1.5.4.1
 mr.bob = 0.1.1
