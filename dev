@@ -4,7 +4,7 @@ extensions +=
     buildout.bootstrap
     mr.bob
     mr.developer
-parts += omelette mrbob
+parts += omelette mr.bob
 show-picked-versions = true
 
 [dev]
@@ -26,7 +26,7 @@ eggs =
     ${dev:packages}
 scripts = zopeskel
 
-[mrbob]
+[mr.bob]
 recipe = zc.recipe.egg
 
 [versions]
