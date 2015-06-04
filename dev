@@ -27,7 +27,7 @@ eggs =
 scripts = zopeskel
 
 [mr.bob]
-recipe = zc.recipe.egg
+recipe = zc.recipe.egg:scripts
 
 [versions]
 Cheetah = 2.2.1
