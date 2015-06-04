@@ -4,7 +4,7 @@ extensions +=
     buildout.bootstrap
     mr.bob
     mr.developer
-parts += omelette
+parts += omelette mrbob
 show-picked-versions = true
 
 [dev]
@@ -24,7 +24,10 @@ eggs =
     ${addon:packages}
     ${base:packages}
     ${dev:packages}
-scripts = mrbob zopeskel
+scripts = zopeskel
+
+[mrbob]
+recipe = zc.recipe.egg
 
 [versions]
 Cheetah = 2.2.1
