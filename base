@@ -7,10 +7,6 @@ parts =
     env
     plone
 
-buildoutname = somename
-extensions = buildout.sendpickedversions
-send-data-url = http://picked-versions.pythonpackages.com/
-
 [base]
 packages =
     Pillow
