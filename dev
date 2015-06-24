@@ -12,7 +12,9 @@ packages =
     Products.FSDump
     ZopeSkel
     bobtemplates.plone
+    iw.debug
     mr.bob
+    plone.reload
     tl.eggdeps
     zopeskel.dexterity
 
