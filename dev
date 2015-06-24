@@ -12,6 +12,8 @@ packages =
     Products.FSDump
     ZopeSkel
     bobtemplates.plone
+    ipdb
+    ipython
     iw.debug
     mr.bob
     plone.reload
@@ -37,5 +39,10 @@ Products.FSDump = 0.9.5
 ZopeSkel = 2.21.2
 bobtemplates.plone = 0.9
 buildout.bootstrap = 1.4.8
-zopeskel.dexterity = 1.5.4.1
+ipdb = 0.8.1
+ipython = 3.2.0
+iw.debug = 0.3
 mr.bob = 0.1.1
+plone.reload = 2.0
+tl.eggdeps = 0.4
+zopeskel.dexterity = 1.5.4.1
