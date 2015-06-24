@@ -1,34 +1,15 @@
 Plock Pins
 ==========
 
-Hosted configuration files for all versions of Plone
+Extendable configuration files for Plone
 
-Usage
------
-
-Install Plone with Plock Pins
-
-Install virtualenv & buildout
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Install Plone 
+-------------
 
 ::
 
     $ virtualenv-2.7
     $ bin/pip install zc.buildout
-    $ bin/buildout init
-
-Edit buildout.cfg
-~~~~~~~~~~~~~~~~~
-
-::
-
-    [buildout]
-    extends = https://raw.github.com/plock/pins/master/plone-4-3
-
-Run Buildout & Start Plone
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-::
-
+    $ echo "[buildout]\nextends = https://raw.github.com/plock/pins/dev/plone-4-3" > buildout.cfg
     $ bin/buildout
     $ bin/plone fg

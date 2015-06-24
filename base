@@ -1,22 +1,18 @@
 [buildout]
-find-links =
-    https://raw.github.com/plock/dist/master/docutils-0.9.1.tar.gz
-    https://raw.github.com/plock/dist/master/elementtree-1.2.7-20070827-preview.zip
+find-links = ${find-links:urls}
 newest = false
 parts = plone
 
-[base]
-packages =
+[find-links]
+urls =
+    https://raw.github.com/plock/dist/master/docutils-0.9.1.tar.gz
+    https://raw.github.com/plock/dist/master/elementtree-1.2.7-20070827-preview.zip
+
+[packages]
+names =
     Pillow
     Plone
-zcml =
 
 [plone]
-eggs = 
-    ${base:packages}
-products =
+eggs = ${packages:names}
 recipe = plone.recipe.zope2instance
-scripts =
-user = admin:admin
-zcml =
-    ${base:zcml}
