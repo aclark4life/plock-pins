@@ -4,7 +4,6 @@ extensions =
     buildout.bootstrap
     mr.developer
 parts += 
-    env
     omelette
 show-picked-versions = true
 
@@ -22,9 +21,6 @@ packages =
     tl.eggdeps
     zopeskel.dexterity
 slugs =
-
-[env]
-recipe = gocept.recipe.env
 
 [omelette]
 eggs = ${plone:eggs}
