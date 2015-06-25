@@ -31,5 +31,5 @@ eggs =
     ${base:packages}
     ${dev:packages}
     ${user:packages}
-scripts = mrbob pillow zopeskel
+scripts = mrbob zopeskel
 user = admin:admin
