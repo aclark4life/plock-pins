@@ -1,18 +1,35 @@
+[addon]
+packages =
+    plonetheme.diazo_sunburst
+    zope2_bootstrap
+slugs =
+    zope2_bootstrap
+
+[base]
+packages =
+    Pillow
+    Plone
+slugs =
+
 [buildout]
-find-links = ${find-links:urls}
+extends = 
+    https://raw.github.com/plock/pins/dev/dist
+    https://raw.github.com/plock/pins/dev/versions
+find-links = ${dist:urls}
 newest = false
 parts = plone
 
-[find-links]
-urls =
-    https://raw.github.com/plock/dist/master/docutils-0.9.1.tar.gz
-    https://raw.github.com/plock/dist/master/elementtree-1.2.7-20070827-preview.zip
-
-[packages]
-names =
-    Pillow
-    Plone
-
 [plone]
-eggs = ${packages:names}
+eggs =
+    ${addon:packages}
+    ${base:packages}
+    ${user:packages}
 recipe = plone.recipe.zope2instance
+zcml =
+    ${addon:slugs}
+    ${base:slugs}
+    ${user:slugs}
+
+[user]
+packages =
+slugs = 
