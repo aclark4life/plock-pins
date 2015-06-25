@@ -25,6 +25,7 @@ eggs =
     ${base:packages}
     ${user:packages}
 recipe = plone.recipe.zope2instance
+scripts =
 zcml =
     ${addon:slugs}
     ${base:slugs}
