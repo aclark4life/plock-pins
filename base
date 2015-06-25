@@ -12,9 +12,7 @@ packages =
 slugs =
 
 [buildout]
-extends = 
-    https://raw.github.com/plock/pins/dev/dist
-    https://raw.github.com/plock/pins/dev/versions
+extends = https://raw.github.com/plock/pins/dev/dist
 find-links = ${dist:urls}
 newest = false
 parts = plone
