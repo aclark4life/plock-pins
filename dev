@@ -32,4 +32,3 @@ eggs =
     ${dev:packages}
     ${user:packages}
 scripts = mrbob zopeskel
-user = admin:admin
