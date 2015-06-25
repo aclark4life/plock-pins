@@ -1,5 +1,9 @@
 [versions]
 
+# addon
+plonetheme.diazo-sunburst = 0.0.9
+zope2-bootstrap = 0.1.0
+
 # base
 Pillow = 2.8.2
 setuptools = 17.1.1
