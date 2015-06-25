@@ -3,7 +3,9 @@ auto-checkout = *
 extensions =
     buildout.bootstrap
     mr.developer
-parts += omelette
+parts += 
+    env
+    omelette
 show-picked-versions = true
 
 [dev]
@@ -20,6 +22,9 @@ packages =
     tl.eggdeps
     zopeskel.dexterity
 slugs =
+
+[env]
+recipe = gocept.recipe.env
 
 [omelette]
 eggs = ${plone:eggs}
