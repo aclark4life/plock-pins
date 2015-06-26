@@ -15,7 +15,12 @@ slugs =
 extends = https://raw.githubusercontent.com/plock/pins/master/dist
 find-links = ${dist:urls}
 newest = false
-parts = plone
+parts = 
+    env
+    plone
+
+[env]
+recipe = gocept.recipe.env
 
 [plone]
 eggs =
