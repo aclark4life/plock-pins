@@ -1,0 +1,5 @@
+[buildout]
+parts += env
+
+[env]
+recipe = gocept.recipe.env
