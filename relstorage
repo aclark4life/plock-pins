@@ -1,6 +1,15 @@
 [plone]
 rel-storage =
-    dbname plone
-    type postgresql
-    user admin
-    passwd admin
+    dbname ${relstorage:dbname}
+    host ${relstorage:host}
+    type ${relstorage:type}
+    user ${relstorage:user}
+    password ${relstorage:password}
+
+[relstorage]
+dbname = plone
+host = localhost
+type = postgresql
+user = admin
+password = admin
+
