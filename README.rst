@@ -12,4 +12,4 @@ Install Plone
     bin/pip install zc.buildout
     echo "[buildout]\nextends = https://raw.githubusercontent.com/plock/pins/master/plone-4-3" > buildout.cfg
     bin/buildout
-    bin/plone fg
+    bin/plone foreground
