@@ -1,0 +1,6 @@
+[plone]
+rel-storage =
+    db ${env:RELSTOR_DB_NAME}
+    type ${env:RELSTOR_DB_TYPE}
+    user ${env:RELSTOR_DB_USER}
+    passwd ${env:RELSTOR_DB_PASS}
