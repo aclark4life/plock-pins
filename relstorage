@@ -1,5 +1,7 @@
 [plone]
-eggs += RelStorage
+eggs += 
+    RelStorage
+    psycopg2
 rel-storage =
     dbname ${relstorage:dbname}
     host ${relstorage:host}
