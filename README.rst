@@ -6,6 +6,8 @@ Extendable configuration files for Plone
 Install Plone 
 -------------
 
+Cut and paste in terminal
+
 ::
 
     virtualenv-2.7 .
