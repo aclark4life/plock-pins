@@ -1,6 +1,6 @@
 [plone]
 rel-storage =
-    db plone
+    dbname plone
     type postgresql
     user admin
     passwd admin
