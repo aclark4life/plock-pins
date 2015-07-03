@@ -12,7 +12,6 @@ rel-storage =
 [relstorage]
 dbname = plone
 host = localhost
+password = plone
 type = postgresql
 user = plone
-password =
-
