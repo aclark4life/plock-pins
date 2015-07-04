@@ -2,16 +2,13 @@
 eggs += 
     RelStorage
     psycopg2
+parts += database_url
 rel-storage =
-    dbname ${relstorage:dbname}
-    host ${relstorage:host}
-    type ${relstorage:type}
-    user ${relstorage:user}
-    password ${relstorage:password}
+    dbname ${database_url:name}
+    host ${database_url:host}
+    type ${database_url:engine}
+    user ${database_url:user}
+    password ${database_url:password}
 
-[relstorage]
-dbname = plone
-host = localhost
-password = plone
-type = postgresql
-user = plone
+[database_url]
+recipe = collective.recipe.database_url
