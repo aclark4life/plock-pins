@@ -1,0 +1,3 @@
+# Configure Plone username & password with environment variables PLONE_USER & PLONE_PASS
+[plone]
+user = ${env:PLONE_USER}:${env:PLONE_PASS}
