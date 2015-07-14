@@ -5,4 +5,5 @@ extends =
     https://raw.githubusercontent.com/plock/pins/master/versions
 
 [addon]
-packages -= plonetheme.diazo_sunburst
+packages =
+    zope2_bootstrap
