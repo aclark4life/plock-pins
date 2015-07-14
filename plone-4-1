@@ -3,3 +3,6 @@ extends =
     https://raw.githubusercontent.com/plock/pins/master/base
     https://raw.githubusercontent.com/plock/pins/master/plone-4-1-6-versions.cfg
     https://raw.githubusercontent.com/plock/pins/master/versions
+
+[addon]
+packages -= plonetheme.diazo_sunburst
