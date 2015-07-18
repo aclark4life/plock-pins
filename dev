@@ -20,7 +20,8 @@ packages =
     plone.reload
     tl.eggdeps
     zopeskel.dexterity
-slugs =
+slugs = 
+    iw.debug
 
 [omelette]
 eggs = ${plone:eggs}
@@ -33,3 +34,8 @@ eggs =
     ${dev:packages}
     ${user:packages}
 scripts = mrbob zopeskel
+zcml =
+    ${addon:slugs}
+    ${base:slugs}
+    ${dev:slugs}
+    ${user:slugs}
