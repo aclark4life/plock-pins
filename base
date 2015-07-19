@@ -2,8 +2,6 @@
 packages =
     plonetheme.diazo_sunburst
     zope2_bootstrap
-slugs =
-    zope2_bootstrap
 
 [base]
 packages =
