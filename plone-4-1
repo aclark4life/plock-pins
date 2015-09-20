@@ -1,15 +1,9 @@
 [buildout]
 extends = 
-    https://raw.github.com/plock/pins/master/plone-4-1-6-versions.cfg
-    https://raw.github.com/plock/pins/master/base
+    https://raw.githubusercontent.com/plock/pins/master/base
+    https://raw.githubusercontent.com/plock/pins/master/plone-4-1-6-versions.cfg
+    https://raw.githubusercontent.com/plock/pins/master/versions
 
-parts = plone
-versions = versions
-
-[plone]
-recipe = plone.recipe.zope2instance
-eggs =
-    Pillow
-    Plone
-    Products.PloneHotfix20121106
-user = admin:admin
+[addon]
+packages =
+    zope2_bootstrap

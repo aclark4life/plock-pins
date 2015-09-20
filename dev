@@ -1,15 +1,41 @@
 [buildout]
 auto-checkout = *
-extensions += mr.developer
-parts += omelette
+extensions =
+    buildout.bootstrap
+    mr.developer
+parts += 
+    omelette
 show-picked-versions = true
+
+[dev]
+packages = 
+    Products.DocFinderTab
+    Products.FSDump
+    ZopeSkel
+    bobtemplates.plone
+    ipdb
+    ipython
+    iw.debug
+    mr.bob
+    plone.reload
+    tl.eggdeps
+    zopeskel.dexterity
+slugs = 
+    iw.debug
 
 [omelette]
 eggs = ${plone:eggs}
 recipe = collective.recipe.omelette
 
 [plone]
-eggs +=
-    Products.DocFinderTab
-    Products.FSDump
-    tl.eggdeps
+eggs =
+    ${addon:packages}
+    ${base:packages}
+    ${dev:packages}
+    ${user:packages}
+scripts = mrbob zopeskel
+zcml =
+    ${addon:slugs}
+    ${base:slugs}
+    ${dev:slugs}
+    ${user:slugs}

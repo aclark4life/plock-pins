@@ -1,5 +1,27 @@
 [versions]
-Pillow = 2.5.3
+
+# addon
+plonetheme.diazo-sunburst = 0.0.9
+zope2-bootstrap = 0.2.0
+
+# base
+Pillow = 2.9.0
+setuptools = 18.3.1
+zc.buildout = 2.4.3
+
+# dev
+Cheetah = 2.2.1
+MarkupSafe = 0.23
+Products.DocFinderTab = 1.0.5
+Products.FSDump = 0.9.5
 ZopeSkel = 2.21.2
-setuptools = 5.0.1
-zc.buildout = 2.2.1
+bobtemplates.plone = 0.9
+buildout.bootstrap = 1.4.8
+gocept.recipe.env = 1.0
+ipdb = 0.8.1
+ipython = 3.2.0
+iw.debug = 0.3
+mr.bob = 0.1.1
+plone.reload = 2.0
+tl.eggdeps = 0.4
+zopeskel.dexterity = 1.5.4.1

@@ -1,0 +1,14 @@
+[plone]
+eggs += 
+    RelStorage
+    psycopg2
+parts += database_url
+rel-storage =
+    dbname ${database_url:name}
+    host ${database_url:host}
+    type ${database_url:engine}
+    user ${database_url:user}
+    password ${database_url:password}
+
+[database_url]
+recipe = collective.recipe.database_url
