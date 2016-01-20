@@ -5,7 +5,7 @@ plonetheme.diazo-sunburst = 0.0.9
 zope2-bootstrap = 0.2.0
 
 # base
-Pillow = 3.0.0
+Pillow = 3.1.0
 setuptools = 18.3.2
 zc.buildout = 2.4.4
 
