@@ -15,8 +15,12 @@ extends = https://raw.githubusercontent.com/plock/pins/master/dist
 find-links = ${dist:urls}
 newest = false
 parts = 
+    bootstrap
     env
     plone
+
+[bootstrap]
+recipe = buildout.bootstrap
 
 [env]
 recipe = gocept.recipe.env
