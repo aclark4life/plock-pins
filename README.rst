@@ -36,7 +36,7 @@ Plone 4
 Plone 3
 +++++++
 
-**Requires Python 2.4**
+*Requires Python 2.4*
 
 ::
 
@@ -46,7 +46,7 @@ Plone 3
 Plone 2
 +++++++
 
-**Requires Python 2.4**
+*Requires Python 2.4*
 
 ::
 
@@ -56,7 +56,7 @@ Plone 2
 Plone 1
 +++++++
 
-**Requires Python 2.4**
+*Requires Python 2.4*
 
 ::
 
