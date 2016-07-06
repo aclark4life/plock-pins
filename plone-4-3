@@ -3,3 +3,6 @@ extends =
     https://raw.githubusercontent.com/plock/pins/master/base
     https://raw.githubusercontent.com/plock/pins/master/plone/plone-4-3-4-versions.cfg
     https://raw.githubusercontent.com/plock/pins/master/versions
+
+[versions]
+Products.PloneFormGen = 1.7.19
