@@ -1,7 +1,7 @@
 [versions]
 
 # addon
-plonetheme.diazo-sunburst = 0.1.0
+plonetheme.diazo-sunburst = 0.1.1
 zope2-bootstrap = 0.2.0
 
 # base
