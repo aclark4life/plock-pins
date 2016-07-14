@@ -1,8 +1,8 @@
 [versions]
 
 # addon
-plonetheme.diazo-sunburst = 0.0.9
-zope2-bootstrap = 0.2.0
+plonetheme.diazo_sunburst = 0.1.0
+zope2_bootstrap = 0.2.0
 
 # base
 Pillow = 3.3.0
