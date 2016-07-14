@@ -1,17 +1,7 @@
 [versions]
-
-# addon
-plonetheme.diazo-sunburst = 0.1.1
-zope2-bootstrap = 0.2.0
-
-# base
-Pillow = 3.3.0
-setuptools = 20.9.0
-zc.buildout = 2.4.4
-
-# dev
 Cheetah = 2.2.1
 MarkupSafe = 0.23
+Pillow = 3.3.0
 Products.DocFinderTab = 1.0.5
 Products.FSDump = 0.9.5
 ZopeSkel = 2.21.2
@@ -23,5 +13,9 @@ ipython = 3.2.0
 iw.debug = 0.3
 mr.bob = 0.1.1
 plone.reload = 2.0
+plonetheme.diazo-sunburst = 0.1.2
+setuptools = 24.0.3
 tl.eggdeps = 0.4
+zc.buildout = 2.5.2
+zope2-bootstrap = 0.2.0
 zopeskel.dexterity = 1.5.4.1
