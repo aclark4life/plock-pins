@@ -20,3 +20,8 @@ programs +=
 recipe = plone.recipe.zeoserver
 eggs = ${plone:eggs}
 zeo-address = ${ports:zeo}
+
+[zeo-py24]
+recipe = plone.recipe.zope2zeoserver
+eggs = ${plone:eggs}
+zeo-address = ${ports:zeo}
