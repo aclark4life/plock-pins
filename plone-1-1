@@ -58,7 +58,7 @@ update-command = ${:command}
 
 [scriptingcmf]
 recipe = hexagonit.recipe.download
-url = http://plone.org/products/scriptingcmf/releases/0.1/scriptingcmf-0_1.tgz
+url = http://dist.plone.org/download/scriptingcmf-0_1.tgz
 
 [symlink]
 recipe = plone.recipe.command
