@@ -66,6 +66,13 @@ Plone 1
 Additional Steps
 ^^^^^^^^^^^^^^^^
 
+- Create admin user
+
 ::
 
     $ bin/python parts/zope2/zpasswd.py -u admin -p admin parts/zope2/inituser
+
+
+- Add CMF Action Icons Tool
+
+.. image:: plone-1-1.png
