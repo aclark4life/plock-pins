@@ -85,3 +85,5 @@ programs =
 [versions]
 zc.buildout = 1.7.1
 Pillow = 1.7.8
+hexagonit.recipe.download = 1.7
+collective.recipe.supervisor = 0.19
