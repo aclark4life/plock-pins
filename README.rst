@@ -76,3 +76,8 @@ Additional Steps
 - Add CMF Action Icons Tool
 
 .. image:: plone-1-1.png
+
+Known Issues
+^^^^^^^^^^^^
+
+- 1.0.3 to 1.1 migration fails
