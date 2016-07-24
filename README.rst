@@ -56,9 +56,16 @@ Plone 2
 Plone 1
 +++++++
 
-*Requires Python 2.4*
+*Requires Python 2.4 & additional steps*
 
 ::
 
     [buildout]
     extends = http://raw.githubusercontent.com/plock/pins/master/plone-1-1
+
+Additional Steps
+^^^^^^^^^^^^^^^^
+
+::
+
+    $ bin/python parts/zope2/zpasswd.py -u admin -p admin parts/zope2/inituser
