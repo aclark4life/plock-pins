@@ -1,0 +1,2 @@
+[plone]
+eggs += plone.app.ldap
