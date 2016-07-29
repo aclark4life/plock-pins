@@ -24,3 +24,10 @@ zc.buildout = 1.7.1
 [zope2]
 recipe = plone.recipe.zope2install
 url = ${versions:zope2-url}
+
+[versions]
+Pillow = 1.7.8
+plone.recipe.zope2install = 3.3
+plone.recipe.zope2instance = 3.10
+setuptools = 1.4.2
+zc.buildout = 1.7.1
