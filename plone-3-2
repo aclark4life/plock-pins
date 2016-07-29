@@ -1,7 +1,7 @@
 # Requires Python 2.4
 [buildout]
 extends = 
-    https://raw.github.com/plock/pins/master/plone-3-2-3-versions.cfg
+    https://raw.github.com/plock/pins/master/plone/plone-3-2-3-versions.cfg
     https://raw.github.com/plock/pins/master/base
 parts = plone
 versions = versions
