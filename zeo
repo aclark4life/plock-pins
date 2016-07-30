@@ -25,3 +25,4 @@ zeo-address = ${ports:zeo}
 recipe = plone.recipe.zope2zeoserver
 eggs = ${plone:eggs}
 zeo-address = ${ports:zeo}
+zope2-location = ${zope2:location}
