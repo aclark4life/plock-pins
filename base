@@ -13,7 +13,19 @@ slugs =
 [buildout]
 extends = https://raw.githubusercontent.com/plock/pins/master/dist
 find-links = ${dist:urls}
+
+# ``newest = false`` to prevent this:
+# Upgraded:
+#   setuptools version 24.0.3;
+# restarting.
+# Upgraded:
+#   setuptools version 24.0.3;
+# restarting.
+# Upgraded:
+#   setuptools version 24.0.3;
+# restarting.
 newest = false
+
 parts = 
     env
     plone
