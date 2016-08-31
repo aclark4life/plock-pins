@@ -17,5 +17,5 @@ plonetheme.diazo-sunburst = 0.1.2
 setuptools = 24.0.3
 tl.eggdeps = 0.4
 zc.buildout = 2.5.2
-zope2-bootstrap = 0.2.0
+zope2-bootstrap = 0.3.0
 zopeskel.dexterity = 1.5.4.1
