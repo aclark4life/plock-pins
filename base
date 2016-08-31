@@ -13,7 +13,7 @@ slugs =
 [buildout]
 extends = https://raw.githubusercontent.com/plock/pins/master/dist
 find-links = ${dist:urls}
-newest = false
+newest = true
 parts = 
     env
     plone
