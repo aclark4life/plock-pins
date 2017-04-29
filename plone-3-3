@@ -12,7 +12,6 @@ versions = versions
 [plone]
 recipe = plone.recipe.zope2instance
 zope2-location = ${zope2:location}
-url = http://old.zope.org/Products/Zope/2.10.13/Zope-2.10.13-final.tgz
 
 [zope2]
 recipe = plone.recipe.zope2install
