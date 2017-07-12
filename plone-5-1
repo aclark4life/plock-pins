@@ -1,5 +1,5 @@
 [buildout]
 extends = 
     https://raw.githubusercontent.com/plock/pins/master/base
-    https://raw.githubusercontent.com/plock/pins/master/plone/plone-5-1b2-versions.cfg
+    https://raw.githubusercontent.com/plock/pins/master/plone/plone-5-1b4-versions.cfg
     https://raw.githubusercontent.com/plock/pins/master/versions
