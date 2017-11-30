@@ -46,6 +46,7 @@
 # https://www.gnu.org/software/make/manual/html_node/Using-Variables.html
 
 APP=app
+DOC=doc
 NAME="Alex Clark"
 PROJECT=project
 TMP:=$(shell echo `tmp`)
@@ -84,27 +85,36 @@ ablog-serve:
 	bin/ablog serve
 
 # Django
-django: django-dp-clean django-proj-clean django-install django-init django-migrate django-su django-serve  # Chain
-django-debug: django-shell  # Alias
-django-init: django-pg-init django-proj-init  # Chain
-django-pg-clean:  # PostgreSQL
-	-dropdb $(PROJECT)
-django-proj-clean:
+django-app-clean:
 	@-rm -rvf $(PROJECT)
 	@-rm -v manage.py
-django-sq-clean:  # SQLite
-	-rm db.sqlite3
-django-pg-init:  # PostgreSQL
-	-createdb $(PROJECT)_$(APP)
-django-proj-init:
-	-mkdir -p $(PROJECT)/$(APP)
+django-app-init:
+	-mkdir -p $(PROJECT)/$(APP)/templates
+	-touch $(PROJECT)/$(APP)/templates/base.html
 	-django-admin startproject $(PROJECT) .
 	-django-admin startapp $(APP) $(PROJECT)/$(APP)
-django-sq-init:  # SQLite
-	-touch db.sqlite3
+django-db-clean:  # PostgreSQL
+	-dropdb $(PROJECT)
+django-db-init:  # PostgreSQL
+	-createdb $(PROJECT)_$(APP)
+db-init: django-db-init  # Alias
+django-debug: django-shell  # Alias
+django-graph:
+	bin/python manage.py graph_models $(APP) -o graph_models_$(PROJECT)_$(APP).png 
+django-init: 
+	@$(MAKE) django-db-init
+	@$(MAKE) django-app-init
+	@$(MAKE) django-settings
+	git add $(PROJECT)
+	git add manage.py
+	@$(MAKE) git-commit-auto-push
 django-install:
-	@echo "Django\n" > requirements.txt
+	@echo "Django\ndj-database-url\npsycopg2\n" > requirements.txt
 	@$(MAKE) python-install
+	@$(MAKE) freeze
+	-git add requirements.txt
+	-@$(MAKE) git-commit-auto-push
+django-lint: django-yapf  # Alias
 django-migrate:
 	bin/python manage.py migrate
 django-migrations:
@@ -114,17 +124,31 @@ django-serve:
 	bin/python manage.py runserver 0.0.0.0:8000
 django-test:
 	bin/python manage.py test
+django-settings:
+	echo "ALLOWED_HOSTS = ['*']" >> $(PROJECT)/settings.py
+	echo "AUTH_PASSWORD_VALIDATORS = [{'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', }, { 'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator', },]" >> $(PROJECT)/settings.py
+	echo "import dj_database_url; DATABASES = { 'default': dj_database_url.config(default=os.environ.get( 'DATABASE_URL', 'postgres://%s:%s@%s:%s/%s' % (os.environ.get('DB_USER', ''), os.environ.get('DB_PASS', ''), os.environ.get('DB_HOST', 'localhost'), os.environ.get('DB_PORT', '5432'), os.environ.get('DB_NAME', 'project_app'))))}" >> $(PROJECT)/settings.py
 django-shell:
 	bin/python manage.py shell
 django-static:
 	bin/python manage.py collectstatic --noinput
 django-su:
 	bin/python manage.py createsuperuser
-django-user: django-su  # Alias
 django-yapf:
 	-yapf -i *.py
 	-yapf -i -e $(PROJECT)/urls.py $(PROJECT)/*.py  # Don't format urls.py
 	-yapf -i $(PROJECT)/$(APP)/*.py
+graph: django-graph
+migrate: django-migrate  # Alias
+migrations: django-migrations  # Alias
+static: django-static  # Alias
+su: django-su  # Alias
+
+# Elastic Beanstalk
+eb-init: 
+	eb init -i
+eb-create:
+	eb create
 
 # Git
 MESSAGE="Update"
@@ -174,6 +198,8 @@ help:
         | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$' | xargs | tr ' ' '\n' | awk\
         '{print "    - "$$0}' | less  # http://stackoverflow.com/a/26339924
 	@echo "\n"
+upstream:
+	git push --set-upstream origin master
 
 # Heroku
 heroku: heroku-init
@@ -200,6 +226,11 @@ heroku-web-on:
 heroku-web-off:
 	heroku ps:scale web=0
 
+# Makefile
+make:
+	git add Makefile
+	@$(MAKE) git-commit-auto-push
+
 # Misc
 
 pdf:
@@ -208,7 +239,7 @@ pdf:
 # Node Package Manager
 npm: npm-init npm-install
 npm-init:
-	npm init
+	npm init -y
 npm-install:
 	npm install
 
@@ -257,7 +288,9 @@ python-serve:
 package-test:
 	bin/python setup.py test
 python-virtualenv:
-	virtualenv .
+	virtualenv --python=python2.7 .
+python-virtualenv-3:
+	virtualenv --python=python3.6 .
 python-yapf:
 	-yapf -i *.py
 	-yapf -i $(PROJECT)/*.py
@@ -266,6 +299,8 @@ python-wc:
 	-wc -l *.py
 	-wc -l $(PROJECT)/*.py
 	-wc -l $(PROJECT)/$(APP)/*.py
+virtualenv: python-virtualenv  # Alias
+virtualenv-3: python-virtualenv-3  # Alias
 
 # Python Package
 package: package-init  # Alias
@@ -288,31 +323,46 @@ package-release:
 package-release-test:
 	bin/python setup.py sdist --format=gztar,zip upload -r test
 
+# Redhat
+redhat-update:
+	sudo yum update
+	sudo yum upgrade -y
+
+# Readme
+readme:
+	echo "Creating README.rst"
+	@echo $(PROJECT)-$(APP) > README.rst
+	@echo ================================================================================ >> README.rst
+	echo "Done."
+	git add README.rst
+	@$(MAKE) git-commit-auto-push
+
 # Review
 review:
 ifeq ($(UNAME), Darwin)
-	@open -a $(EDITOR) `find $(PROJECT) -name \*.py | grep -v __init__.py`\
+	@open -a $(EDITOR) `find $(PROJECT) -name \*.py | grep -v __init__.py | grep -v migrations`\
 		`find $(PROJECT) -name \*.html`
 else
 	@echo "Unsupported"
 endif
 
 # Sphinx
-sphinx: sphinx-clean sphinx-install sphinx-init sphinx-build sphinx-serve  # Chain
-sphinx-clean:
-	@rm -rvf $(PROJECT)
 sphinx-build:
-	bin/sphinx-build -b html -d $(PROJECT)/_build/doctrees $(PROJECT) $(PROJECT)/_build/html
-sphinx-install:
-	@echo "ablog\n" > requirements.txt
-	@$(MAKE) python-install
+	sphinx-build -b html -d $(DOC)/_build/doctrees $(DOC) $(DOC)/_build/html
 sphinx-init:
-	bin/sphinx-quickstart -q -p $(PROJECT)-$(APP) -a $(NAME) -v 0.0.1 $(PROJECT)
+	sphinx-quickstart -q -p $(PROJECT)-$(APP) -a $(NAME) -v 0.0.1 $(DOC)
+sphinx-install:
+	@echo "Sphinx\n" > requirements.txt
+	@$(MAKE) python-install
+# https://stackoverflow.com/a/32302366/185820
 sphinx-serve:
-	@echo "\nServing HTTP on http://0.0.0.0:8000 ...\n"
-	pushd $(PROJECT)/_build/html
-	bin/python -m SimpleHTTPServer
-	popd
+	@echo "\n\tServing HTTP on http://0.0.0.0:8000\n"
+	pushd $(DOC)/_build/html; python3 -m http.server
+
+# Ubuntu
+ubuntu-update:
+	sudo aptitude update
+	sudo aptitude upgrade -y
 
 # Vagrant
 vagrant: vagrant-clean vagrant-init vagrant-up  # Chain
@@ -328,3 +378,10 @@ vagrant-up:
 	vagrant up --provider virtualbox
 vagrant-update:
 	vagrant box update
+
+# Webpack
+webpack-init:
+	touch entry.js
+	echo "module.exports = { entry: './entry.js', output: { filename: 'bundle.js' } }" > webpack.config.js
+webpack:
+	webpack
