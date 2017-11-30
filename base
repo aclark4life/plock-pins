@@ -11,6 +11,7 @@ packages =
 slugs =
 
 [buildout]
+index = https://pypi.python.org/simple
 extends = https://raw.githubusercontent.com/plock/pins/master/dist
 find-links = ${dist:urls}
 
